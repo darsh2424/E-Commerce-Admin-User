@@ -1,0 +1,166 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="sell_mst.master.cs" Inherits="ElectronicGadgets_Marketplace.sell_mst" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+        <style type="text/css">
+        body
+        {
+            margin:0px;
+            padding:0px;
+        }
+        #main
+        {
+            width:100%;
+            height:700px;
+            
+        }
+        #main #nav
+        {
+            position:fixed;
+            background:#7CB9E8;
+        }
+        #main #nav_td,#nav_toggle
+        {
+            width:220px;
+        }
+        .nav_btn
+        {
+            width:200px;
+            text-align:center;
+            min-height:200px;
+        }
+        .nav_btn .btn
+        {
+            text-decoration:none;
+            color:White;
+            font-size:1.3em;
+            width:100%;
+        } 
+        .nav_btn .btn:hover
+        {
+            color:Black;
+            font-size:1.5em;
+            cursor:pointer;
+        }
+        @keyframes animate
+        {
+            from{width:10%}
+            to{width:70%}
+        }
+        #nav_toggle button
+        {
+            display:none;
+            width:100px;
+            height:75px;
+            font-size:1.3rem;
+            font-weight:bolder;
+        }
+         @media (min-width:320px) and (max-width:1280px)  
+         {  
+               
+                .nav_btn
+                {
+                    display:none;
+                }
+                #nav
+                {
+                    width:50px;
+                    height:100%;
+                    margin-top:-5px;
+                }
+                #main #nav_td
+                {
+                    width:5%;
+                }
+                .nav_btn
+                {
+                        width:200px;
+                        text-align:center;
+                        padding:0px 0px;
+                 }
+                #nav_toggle button
+                {
+                    width:50px;
+                    display:block;
+                    position:sticky;
+                }               
+         }
+    </style>
+    <script type="text/javascript">
+        function toggle_right() {
+            if (document.getElementById('toggle_btn').innerHTML == '&gt;') {
+                document.getElementById('toggle_btn').innerHTML = '&lt;';
+                document.getElementById('toggle_btn').style.width = '100px';
+                document.getElementById('nav').style.width = '200px';
+                input = document.getElementsByClassName('nav_btn');
+                for(var i=0;i<input.length;i++)
+                {
+                    document.getElementsByClassName('nav_btn')[i].style = 'display:block;font-size:1.3rem;';
+                }
+                document.getElementById('content_td').style = "opacity:0.1;pointer-events:none;background-color:#7d7d7d;";
+                document.getElementById('master-body').style = "overflow:hidden";
+            }
+            else if (document.getElementById('toggle_btn').innerHTML == '&lt;') {
+                document.getElementById('toggle_btn').innerHTML = '&gt;';
+                document.getElementById('toggle_btn').style.width = '50px';
+                document.getElementById('nav').style.width = '50px';
+                input = document.getElementsByClassName('nav_btn');
+                for (var i = 0; i < input.length; i++) {
+                    document.getElementsByClassName('nav_btn')[i].style = 'display:none;';
+                }
+                document.getElementById('content_td').style = "background-color:white;pointer-events:auto;opacity:1;";
+                document.getElementById('master-body').style = "overflow:auto";
+            }
+            
+            
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="master-body">
+    <div id="nav_toggle">
+        <button id="toggle_btn" onclick="toggle_right();" />&gt;</button>
+    </div>
+    <table id="main">
+        <tr>
+            <td id="nav_td" valign="top">
+                
+                <table id="nav">
+                    <tr>
+                        <td>
+                            <div class="nav_btn" style="margin-top:100px;"><a id="home_btn" class="btn" href="sell_home.aspx">Home</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="nav_btn" ><a id="prod_btn" class="btn" href="sell_prod.aspx">My Products</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="nav_btn"><a id="rep_btn" class="btn" href="sell_report.aspx">Report</a></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="nav_btn">
+                                <button class="logout" style="background:none;border:none;">
+                                    <a style="color:white;text-decoration:none;padding:0px" href="logout.aspx"><img src="img/proj_img/logout.png" width="25px" height="25px" />LOGOUT</a>
+                                </button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+            <td id="content_td" valign="top">
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

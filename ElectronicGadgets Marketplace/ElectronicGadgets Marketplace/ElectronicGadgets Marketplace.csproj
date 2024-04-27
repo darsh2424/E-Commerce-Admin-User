@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B00B7BBA-29A1-4B1D-BD66-24C5C8B428FB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ElectronicGadgets_Marketplace</RootNamespace>
+    <AssemblyName>ElectronicGadgets Marketplace</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\elctrogadget.mdf" />
+    <Content Include="App_Data\elctrogadget_log.ldf">
+      <DependentUpon>elctrogadget.mdf</DependentUpon>
+    </Content>
+    <Content Include="cart.aspx" />
+    <Content Include="img\a.jpg" />
+    <Content Include="img\proj_img\AC1.jpg" />
+    <Content Include="img\proj_img\AC2.jpg" />
+    <Content Include="img\proj_img\AC3.jpg" />
+    <Content Include="img\proj_img\AC4.jpg" />
+    <Content Include="img\proj_img\back.png" />
+    <Content Include="img\proj_img\back_kid.png" />
+    <Content Include="img\proj_img\back_left.png" />
+    <Content Include="img\proj_img\back_man.png" />
+    <Content Include="img\proj_img\back_right.png" />
+    <Content Include="img\proj_img\down_arr.jpg" />
+    <Content Include="img\proj_img\logout.png" />
+    <Content Include="img\proj_img\MB1.jpg" />
+    <Content Include="img\proj_img\MB2.jpg" />
+    <Content Include="img\proj_img\MB3.jpg" />
+    <Content Include="img\proj_img\MB4.jpg" />
+    <Content Include="img\proj_img\tv1.jpg" />
+    <Content Include="img\proj_img\tv2.jpg" />
+    <Content Include="img\proj_img\tv3.jpg" />
+    <Content Include="img\proj_img\tv4.jpg" />
+    <Content Include="img\proj_img\tv5.jpg" />
+    <Content Include="img\proj_img\up_arr.jpg" />
+    <Content Include="img\proj_img\WM1.jpg" />
+    <Content Include="img\proj_img\WM2.jpg" />
+    <Content Include="img\proj_img\WM3.jpg" />
+    <Content Include="img\proj_img\WM4.jpg" />
+    <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
+    <Content Include="order.aspx" />
+    <Content Include="register.aspx" />
+    <Content Include="sell_home.aspx" />
+    <Content Include="sell_prod.aspx" />
+    <Content Include="sell_report.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="user_home.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="cart.aspx.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cart.aspx.designer.cs">
+      <DependentUpon>cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="order.aspx.cs">
+      <DependentUpon>order.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="order.aspx.designer.cs">
+      <DependentUpon>order.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="register.aspx.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="register.aspx.designer.cs">
+      <DependentUpon>register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sell_home.aspx.cs">
+      <DependentUpon>sell_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sell_home.aspx.designer.cs">
+      <DependentUpon>sell_home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sell_mst.Master.cs">
+      <DependentUpon>sell_mst.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sell_mst.Master.designer.cs">
+      <DependentUpon>sell_mst.Master</DependentUpon>
+    </Compile>
+    <Compile Include="sell_prod.aspx.cs">
+      <DependentUpon>sell_prod.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sell_prod.aspx.designer.cs">
+      <DependentUpon>sell_prod.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sell_report.aspx.cs">
+      <DependentUpon>sell_report.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="sell_report.aspx.designer.cs">
+      <DependentUpon>sell_report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="user_home.aspx.cs">
+      <DependentUpon>user_home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="user_home.aspx.designer.cs">
+      <DependentUpon>user_home.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sell_mst.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\prod_img\" />
+    <Folder Include="img\shop_img\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52454</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
